@@ -107,6 +107,11 @@ class Hla(HighLevelAnalyzer):
 
         The type and data values in `frame` will depend on the input analyzer.
         '''
+        if 'error' in frame.data:
+            self.packet_state = None
+            self.packet = bytearray()
+            self.esc_state = None
+            return None
 
         ch = frame.data['data']
 
