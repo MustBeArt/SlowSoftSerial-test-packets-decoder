@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "description": "See https://github.com/MustBeArt/SlowSoftSerial",
   "extensions": {
-    "junk_hla": {
+    "SlowSoftSerial": {
       "type": "HighLevelAnalyzer",
       "entryPoint": "HighLevelAnalyzer.Hla"
     }
