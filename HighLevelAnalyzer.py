@@ -71,8 +71,8 @@ def describe_packet(packet):
             description += str(len(packet) - 10)
     elif packet[1] == 4:
         description += 'PARAMS '
-        description += str(decode_32bit_value(packet[2:10]))
-        description += 'baud, config: '
+        description += str(decode_32bit_value(packet[2:10])/1000.0)
+        description += ' baud, config: '
         description += hex(decode_32bit_value(packet[10:18]))
     elif packet[1] == 0x1f:
         description += 'EXT '
